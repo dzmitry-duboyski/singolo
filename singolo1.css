@@ -1,0 +1,39 @@
+
+.wrapper{
+  margin: 0 auto;
+}
+
+.header{
+  background-color: #2D303A;
+  border-bottom: 7px solid #323746;
+  box-sizing: border-box;
+  width: 1020px;
+  height: 95px;
+}
+
+.header__heading {
+ width: 1px;
+ height: 1px;
+ margin: 0px;
+}
+
+.header__logo {
+  color: #A3A4A8;
+}
+
+.header__star {
+  color: #F06C64;
+}
+
+.nav__li {
+  display: inline-block;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #A3A4A8;
+}
+
+.nav__link:hover {
+  color: #F06C64;
+}
