@@ -44,8 +44,8 @@ body {
   margin: 0;
   font-size: 1.6rem;
   font-family: "Lato Regular", Verdana, sans-serif;
-  color: #666699;
   line-height: 1.42;
+  color: #666699;
 }
 
 * {
@@ -83,13 +83,13 @@ h6 {
 
 .container {
   max-width: 940px;
-    margin: auto;
+  margin: auto;
 }
 
 .portfolio {
   height: 863px;
-  background: #2d303a;
   border-bottom: 6px solid #323746;
+  background: #2d303a;
 }
 
 .portfolio__block {
@@ -105,16 +105,16 @@ h6 {
   margin: 0;
   font-family: "Lato Black", Verdana, sans-serif;
   font-size:3rem;
-  color: #666d89;
   letter-spacing: 0.26px;
+  color: #666d89;
 }
 
 .portfolio__description{
   margin-top: 18px;
   font-family: "Lato Light", Verdana, sans-serif;
   font-size:1.8rem;
-  color: #666699;
   letter-spacing: -0.19px;
+  color: #666699;
 }
 
 .portfolio__tags{
@@ -124,36 +124,37 @@ h6 {
 }
 
 .tag {
-  border: 1px solid #666699;
-  border-radius: 5px;
-  padding: 4px 6px 6px 8px;
   margin-right: 10px;
+  padding: 4px 6px 6px 8px;
+  line-height: 1rem;
   font-family: "Lato Regular", Verdana, sans-serif;
   font-size: 1.2rem;
   letter-spacing: -0.1px;
   color: #666699;
   background: #2d303a;
-  line-height: 1rem;
+  border: 1px solid #666699;
+  border-radius: 5px;
 }
+
 .portfolio__tags .tag:hover {
-  border: 1px solid #ffffff;
   color: #ffffff;
-  transition: 0.2s;
+  border: 1px solid #ffffff;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .tag.active { 
-  border: 1px solid #ffffff;
-  color: #ffffff;
   letter-spacing: -0.2px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .portfolio__examples {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 0;
   overflow: hidden;
-  margin-bottom: 0px;
 }
 
 .portfolio__example {
@@ -165,7 +166,6 @@ h6 {
   width: 220px;
 }
 
-
 .about-us__block {
   padding-top: 56px;
   padding-bottom: 57px;
@@ -176,26 +176,22 @@ h6 {
 }
 
 .about-us__title {
-  margin-left: 1px;
   margin-bottom: 23px;
+  margin-left: 1px;
+  line-height: 42px;
   font-family: "Lato Black", Verdana, sans-serif;
   font-size:3rem;
-  color: #666d89;
-  letter-spacing: -0.058px;
   letter-spacing: -0.3px;
-  line-height: 42px;
+  color: #666d89;
 }
 
 .about-us__title-description {
+  margin-bottom: 15px;
+  line-height: 15px;
   font-family: "Lato Light", Verdana, sans-serif;
   font-size: 1.8rem;
-  color: #666699;
   letter-spacing: -0.04px;
-  line-height: 15px;
-  margin-bottom: 15px;
-
-
-
+  color: #666699;
 }
 
 .about-us__personal {
@@ -216,27 +212,26 @@ h6 {
 }
 
 .about-us__person-name h4 {
-  margin-left: -2;
+  height: 25px;
+  width: 298px;
   margin-bottom: 8px;
+  margin-left: -2;
+  overflow: hidden;
   font-size: 1.8rem;
   font-family: "Lato Black";
   color: #666d89;
-  height: 25px;
-  width: 298px;
-  overflow: hidden;
 }
 
 .about-us__person-description {
+  margin-bottom: 26px;
   font-family: "Lato Regular";
   font-size: 1.2rem;
-  color: #767e9e;
-  line-height: 19px;
   letter-spacing: -0.14px;
-  margin-bottom: 26px;
+  line-height: 19px;
+  color: #767e9e;
 }
 
 .about-us__person-contact {
-  /* margin-left: 1px; */
   display: flex;
   justify-content: flex-start;
  }
@@ -256,7 +251,7 @@ h6 {
  }
 
 .about-us__person-facebook {
-background-image: url(assets/images/icon/contact-facebook.png);
+  background-image: url(assets/images/icon/contact-facebook.png);
 }
 
 .about-us__person-google {
@@ -270,8 +265,6 @@ background-image: url(assets/images/icon/contact-facebook.png);
 .about-us__person-linkedin {
   background-image: url(assets/images/icon/contact-linkedIn.png);
 }
-
-
 
 .about-us__person-facebook:hover,
 .about-us__person-google:hover,
