@@ -220,6 +220,9 @@ h6 {
   font-size: 1.8rem;
   font-family: "Lato Black";
   color: #666d89;
+  height: 25px;
+  width: 298px;
+  overflow: hidden;
 }
 
 .about-us__person-description {
