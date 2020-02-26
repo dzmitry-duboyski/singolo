@@ -139,6 +139,7 @@ h6 {
   border: 1px solid #ffffff;
   color: #ffffff;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .tag.active { 
@@ -262,7 +263,7 @@ background-image: url(assets/images/icon/contact-facebook.png);
   background-image: url(assets/images/icon/contact-google.png);
 }
 
-.about-us__person-twiter {
+ .about-us__person-twiter {
   background-image: url(assets/images/icon/contact-twitter.png);
 }
 
@@ -270,6 +271,17 @@ background-image: url(assets/images/icon/contact-facebook.png);
   background-image: url(assets/images/icon/contact-linkedIn.png);
 }
 
+
+
+.about-us__person-facebook:hover,
+.about-us__person-google:hover,
+.about-us__person-twiter:hover,
+.about-us__person-linkedin:hover{
+  box-shadow: inset 2px 4px 22px 16px rgba(0,0,0,0.16);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.1s;
+}
 
 
 
