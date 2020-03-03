@@ -1,8 +1,7 @@
 @font-face {
   font-family: "Lato Black";
   src: url("./assets/fonts/fonlato-black-webfont.eot");
-  src: url("./assets/fonts/lato-black-webfont.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("./assets/fonts/lato-black-webfont.eot?#iefix") format("embedded-opentype"),
     url("./assets/fonts/lato-black-webfont.woff") format("woff"),
     url("./assets/fonts/lato-black-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -12,8 +11,7 @@
 @font-face {
   font-family: "Lato Bold";
   src: url("./assets/fonts/lato-bold-webfont.eot");
-  src: url("./assets/fonts/lato-bold-webfont.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("./assets/fonts/lato-bold-webfont.eot?#iefix") format("embedded-opentype"),
     url("./assets/fonts/lato-bold-webfont.woff") format("woff"),
     url("./assets/fonts/lato-bold-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -23,8 +21,7 @@
 @font-face {
   font-family: "Lato Light";
   src: url("./assets/fonts/lato-light-webfont.eot");
-  src: url("./assets/fonts/lato-light-webfont.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("./assets/fonts/lato-light-webfont.eot?#iefix") format("embedded-opentype"),
     url("./assets/fonts/lato-light-webfont.woff") format("woff"),
     url("./assets/fonts/lato-light-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -34,8 +31,7 @@
 @font-face {
   font-family: "Lato Regular";
   src: url("./assets/fonts/lato-regular-webfont.eot");
-  src: url("./assets/fonts/lato-regular-webfont.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("./assets/fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"),
     url("./assets/fonts/lato-regular-webfont.woff") format("woff"),
     url("./assets/fonts/lato-regular-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -107,7 +103,7 @@ h6 {
   justify-content: space-between;
   align-items: baseline;
   padding-bottom: 28px;
-  padding-top: 28px;
+  padding-top: 25px;
 }
 
 .header__logo {
@@ -120,8 +116,7 @@ h6 {
   color: #ff6666;
 }
 
-.header__navigation {
-}
+.header__navigation {}
 
 .navigation {
   display: flex;
@@ -187,7 +182,7 @@ h6 {
 .slider-btn.left {
   position: absolute;
   top: 46.5%;
-  margin-left: -72px; 
+  margin-left: -72px;
 }
 
 .slider-btn.right {
@@ -236,7 +231,7 @@ h6 {
 
 .services__title {
   padding-top: 56px;
-  margin-bottom: 49px;
+  margin-bottom: 47px;
 }
 
 .title_name {
@@ -258,7 +253,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 85px; 
+  height: 85px;
 }
 
 .services__item {
