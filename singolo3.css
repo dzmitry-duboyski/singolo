@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "Lato Black";
+  src: url("./assets/fonts/fonlato-black-webfont.eot");
+  src: url("./assets/fonts/lato-black-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/lato-black-webfont.woff") format("woff"),
+    url("./assets/fonts/lato-black-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato Light";
+  src: url("./assets/fonts/lato-light-webfont.eot");
+  src: url("./assets/fonts/lato-light-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/lato-light-webfont.woff") format("woff"),
+    url("./assets/fonts/lato-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato Regular";
+  src: url("./assets/fonts/lato-regular-webfont.eot");
+  src: url("./assets/fonts/lato-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/lato-regular-webfont.woff") format("woff"),
+    url("./assets/fonts/lato-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Lato Regular", Verdana, sans-serif;
+  line-height: 1.42;
+  color: #666699;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.container {
+  max-width: 940px;
+  margin: auto;
+}
+
+.contact {
+  border-bottom: 6px solid #ea676b;
+  background: #f06c64;
+}
+
+.contact-desription {
+  padding-top: 45px;
+  padding-left: 43px;
+}
+
+.contact-title {
+  font-family: "Lato Black", Verdana, sans-serif;
+  font-size: 3rem;
+  color: #f0d8d9;
+  line-height: 44.5px;
+  letter-spacing: -1.6px;
+}
+
+.contact-description_text {
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  font-family: "Lato Light", Verdana, sans-serif;
+  font-size:1.8rem;
+  letter-spacing: -0.88px;
+  line-height: 29px;
+  color: #f0d8d9;
+ }
+
+ .contact-informition_block {
+  padding-top: 30px;
+  padding-left: 43px;
+  padding-bottom: 45px;
+}
+
+.contact-form {
+
+}
+
+.contact-input{
+  display: block;
+  height: 34px;
+  width: 563px;
+  padding-left:13px ;
+  margin-bottom: 15px;
+  letter-spacing: 0.51px;
+  font-family: "Lato Regular", Verdana, sans-serif;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  color: #f48c8f;
+  background: #d6564f;
+}
+
+.contact-textarea {
+  display: block;
+  height: 184px;
+  width: 563px;
+  padding-top: 10px;
+  padding-left:13px;
+  margin-bottom: 15px;
+  letter-spacing: 0.51px;
+  font-family: "Lato Regular", Verdana, sans-serif;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  resize: none;
+  color: #f48c8f;
+  background: #d6564f;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #f48c8f;
+}
+
+input::-webkit-input-placeholder {
+  color: #f48c8f;
+}
+
+.footer {
+ background: #2d303a;
+}
