@@ -287,6 +287,9 @@ input::-webkit-input-placeholder {
 }
 
 .footer-copyright {
+  font-family: "Lato Regular", Verdana, sans-serif;
+  color: #a2a1b5;
+  font-size: 1.2rem;
 
 }
 
@@ -295,7 +298,19 @@ input::-webkit-input-placeholder {
 }
 
 .footer-social_media_block div img {
-  width: 32px;
-  height: 32px;
-  margin-left: 4px;
+  width: 30px;
+  height: 30px;
+  margin-left: 6px;
 }
+
+.footer-icon_facebook:hover,
+.footer-icon_google:hover,
+.footer-icon_twitter:hover,
+.footer-icon_linkedin:hover {
+  box-shadow: inset 2px 4px 22px 16px #454568;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
