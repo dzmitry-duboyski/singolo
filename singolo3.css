@@ -172,7 +172,6 @@ input::-webkit-input-placeholder {
   width: 135px;
   padding-left:13px ;
   padding-right:13px ;
-  margin-bottom: px;
   font-family: "Lato Regular", Verdana, sans-serif;
   font-size: 1.5rem;
   border-radius: 4px;
@@ -182,10 +181,17 @@ input::-webkit-input-placeholder {
   cursor: pointer;
 }
 
+.contact-submit:hover {
+  color: #eeb2b4;
+  background: #ca5858;
+  border: 1px solid rgb(122, 163, 197);
+  transition: 0.2s;
+
+}
+
 .contact-information {
   padding-left: 19px;
   padding-right: 40px;
-
 }
 
 .contact-contact_informition_title {
@@ -248,7 +254,6 @@ input::-webkit-input-placeholder {
 
 .contact-mail {
   margin-top: -5px;
-
 }
 
 .contact-mail_icon {
@@ -256,7 +261,7 @@ input::-webkit-input-placeholder {
 }
 
 .contact-mail_text{
- display: inline-block;
+  display: inline-block;
 }
 
 .contact-mail_link {
@@ -290,7 +295,6 @@ input::-webkit-input-placeholder {
   font-family: "Lato Regular", Verdana, sans-serif;
   color: #a2a1b5;
   font-size: 1.2rem;
-
 }
 
 .footer-social_media_block {
