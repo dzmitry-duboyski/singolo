@@ -96,24 +96,16 @@ h6 {
 .header {
   background: #2d303a;
   border-bottom: 6px solid #323746;
-  
-}
+  }
 
 .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding-bottom: 27px;
-  padding-top: 28px;
+  padding-top: 27px;
 }
 
-/* .header__logo_h1 {
-  height: 1px;
-  width: 1px;
-  font-size: 0.0001rem;
-  display: inline-block;
-
-} */
 
 .header__logo h1{
   display: inline-block;
