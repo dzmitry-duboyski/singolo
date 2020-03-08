@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="style.css" rel="stylesheet" git />
+  <script src="script.js"></script>
   <title>Singolo</title>
 </head>
-
 <body>
   <header class="header">
     <div class="container">
@@ -17,7 +16,7 @@
         </div>
         <nav class="header__navigation">
           <ul class="navigation">
-            <li class="navigation__item "><a class="navigation__link" href="#">home</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#">home</a></li>
             <li class="navigation__item"><a class="navigation__link" href="#">services</a></li>
             <li class="navigation__item"><a class="navigation__link" href="#">portfolio</a></li>
             <li class="navigation__item"><a class="navigation__link" href="#">about</a></li>
@@ -59,7 +58,7 @@
         <h2 class="title_name">Our Services</h2>
         <P class="title_description">Fusce dapibus, tellus ac cursus commodo, tortor mauris
           condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum ni</P>
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</P>
       </div>
       <div class="services__items">
         <div class="services__item">
@@ -125,7 +124,6 @@
       </div>
     </div>
   </section>
-
   <section class="portfolio">
     <div class="container">
       <div class="portfolio__block">
@@ -191,11 +189,10 @@
           <div class="about-us__title">
             <h4>About Us</h4>
           </div>
-          <p class="about-us__title-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-            Duis mollis, non commodo luctus, nisi erat porttitor
-          </p>
-          <p class="about-us__title-description">ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
-            commodo, tortor mauris condimentum nibh.</p>
+          <div class="about-us__title-description">
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor. ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
+            commodo, tortor mauris condimentum nibh.
+          </div>
         </div>
         <div class="about-us__personal">
           <div class="about-us__person">
@@ -267,7 +264,7 @@
       <div class="contact-informition_block">
         <div class="contact-form">
           <form action="">
-            <input class="contact-input" type="text" placeholder="Name (Required)" size="50" required>
+            <input class="contact-input" type="text" pattern="^[A-Za-z\s]+$" placeholder="Name (Required)" size="50" required>
             <input class="contact-input" type="email" placeholder="Email (Required)" required>
             <input class="contact-input" type="text" placeholder="Subject">
             <textarea class="contact-textarea" type="text" placeholder="Describe your project in detail"></textarea>
@@ -302,7 +299,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-block">
-        <div class="footer-copyright">© Copyright 2013</div>
+        <div class="footer-copyright">&copy; Copyright 2013</div>
         <div class="footer-social_media_block">
           <div class="footer-social_facebook">
             <img class="footer-icon_facebook" src="assets/images/icon/contact-facebook.png" alt="facebook">
@@ -316,13 +313,9 @@
           <div class="footer-social_linkedin">
             <img class="footer-icon_linkedin" src="assets/images/icon/contact-linkedIn.png" alt="linkedin">
           </div>
-
         </div>
-
       </div>
     </div>
   </footer>
-
 </body>
-
 </html>
