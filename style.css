@@ -450,6 +450,7 @@ h6 {
   letter-spacing: -0.14px;
   line-height: 19px;
   color: #767e9e;
+  text-align: justify;
 }
 
 .about-us__person-contact {
@@ -469,7 +470,6 @@ h6 {
   height: 32px;
   width: 32px;
   margin-right: 8px;
-
 }
 
 .about-us__person-facebook {
