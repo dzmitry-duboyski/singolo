@@ -5,7 +5,6 @@ const menuNavigationClick =(elem)=>{
 }
 
 const portfolioTagClick=(elem)=>{
-  console.log(elem)
   document.querySelectorAll('.tag').forEach(el => el.classList.remove('active'));
   elem.target.classList.add('active');
   
@@ -20,7 +19,6 @@ const portfolioExamplesClick =(elem)=>{
 }
 
 const sliderNavigationClick = (elem) => {
-  console.log(elem)
   elem=elem.target.className;
   if(elem==='btn_left'){
     return sliderNavigationLeftClick();
@@ -51,6 +49,13 @@ function sliderNavigationRightClick(){
       document.querySelectorAll('.slider-slide').forEach((item) => item.style.left='0');
       document.querySelectorAll('.slider__contents')[0].firstElementChild.remove();
       document.querySelectorAll('.slider__contents')[0].insertAdjacentElement('beforeend',firstSlide)
+      let backgroundColorSliser=document.querySelectorAll('.slider__contents')[0].firstElementChild.classList[1]
+      if(backgroundColorSliser==='blue'){
+          document.querySelector('section').style.background='#648BF0';
+          document.querySelector('section').style.borderBottom='none';
+        } else {
+          document.querySelector('section').style=null;
+        }
     })
   })
 }
@@ -83,11 +88,13 @@ function sliderNavigationLeftClick(){
       return new Promise((resolve)=>{
         document.querySelectorAll('.slider-slide').forEach((item) => item.style.left='0');
         document.querySelectorAll('.slider-slide').forEach((item) => item.style.marginLeft='0');
+
         let backgroundColorSliser=document.querySelectorAll('.slider__contents')[0].firstChild.classList[1];
-          if(backgroundColorSliser==='blue'){
+        
+        if(backgroundColorSliser==='blue'){
             document.querySelector('section').style.background='#648BF0';
             document.querySelector('section').style.borderBottom='none';
-          }else {
+          } else {
             document.querySelector('section').style=null;
           }
       })
