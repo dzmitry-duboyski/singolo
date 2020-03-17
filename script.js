@@ -1,3 +1,4 @@
+var sliderScrollOn=false;
 
 const menuNavigationClick =(elem)=>{
   document.querySelectorAll('.navigation__link').forEach(el => el.classList.remove('active'));
@@ -29,7 +30,12 @@ const sliderNavigationClick = (elem) => {
 }
 
 function sliderNavigationRightClick(){
-  return new Promise ((resolve)=>{
+  if(sliderScrollOn){
+    return;
+  }
+  sliderScrollOn=true;
+
+    return new Promise ((resolve)=>{
     let counter = 0;
     let interval = setInterval(function(){
       document.querySelectorAll('.slider-slide').forEach((item) => {
@@ -56,11 +62,23 @@ function sliderNavigationRightClick(){
         } else {
           document.querySelector('section').style=null;
         }
+        resolve();
+    })
+  })
+  .then(()=>{
+    return new Promise((resolve)=>{
+      sliderScrollOn=false;
+      resolve();
     })
   })
 }
 
 function sliderNavigationLeftClick(){
+  if(sliderScrollOn){
+    return;
+  }
+  sliderScrollOn=true;
+
   return new Promise ((resolve)=>{
     let slides = document.querySelectorAll('.slider__contents');
     let lastSlide = slides[0].lastElementChild;
@@ -95,8 +113,16 @@ function sliderNavigationLeftClick(){
           } else {
             document.querySelector('section').style=null;
           }
+          resolve();
       })
     })
+      .then(()=>{
+      return new Promise((resolve)=>{
+        sliderScrollOn=false;
+        resolve();
+      })
+    })
+    
 }
 
 document.querySelector('.navigation').addEventListener('click', menuNavigationClick);
