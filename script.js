@@ -35,18 +35,30 @@ const sliderNavigationRightClick = () => {
   }
   sliderScrollOn=true;
 
-    return new Promise ((resolve)=>{
+  return new Promise((resolve) => {
+    let backgroundColorSliser=document.querySelectorAll('.slider__contents')[0].firstElementChild.classList[1];
+    if(backgroundColorSliser!=='blue'){
+      document.querySelector('section').style.background='#648BF0';
+      document.querySelector('section').style.borderBottom='none';
+    } else {
+      document.querySelector('section').style=null;
+    }
+      resolve()
+  })
+  .then(()=>{
+    return  new Promise ((resolve)=>{
     let counter = 0;
     let interval = setInterval(function(){
       document.querySelectorAll('.slider-slide').forEach((item) => {
-        counter -=5;
-        item.style.left = `${counter}px`;
-          if(item.style.left==='-935px'){
-            clearInterval(interval);
-            setTimeout(resolve,10);
-            };
-        });
-    },10);
+      counter -=5;
+      item.style.left = `${counter}px`;
+      if(item.style.left==='-935px'){
+        clearInterval(interval);
+        setTimeout(resolve,10);
+       };
+      });
+    },5);
+    })
   })
   .then(()=>{
     return new Promise((resolve)=>{
@@ -55,14 +67,7 @@ const sliderNavigationRightClick = () => {
       document.querySelectorAll('.slider-slide').forEach((item) => item.style.left='0');
       document.querySelectorAll('.slider__contents')[0].firstElementChild.remove();
       document.querySelectorAll('.slider__contents')[0].insertAdjacentElement('beforeend',firstSlide)
-      let backgroundColorSliser=document.querySelectorAll('.slider__contents')[0].firstElementChild.classList[1]
-      if(backgroundColorSliser==='blue'){
-          document.querySelector('section').style.background='#648BF0';
-          document.querySelector('section').style.borderBottom='none';
-        } else {
-          document.querySelector('section').style=null;
-        }
-        resolve();
+      resolve();
     })
   })
   .then(()=>{
@@ -87,6 +92,18 @@ const sliderNavigationLeftClick = () => {
     document.querySelectorAll('.slider-slide').forEach((item) => item.style.left=' -940px');
     resolve();
   })
+  .then(()=>{
+    return new Promise ((resolve) => {
+      let backgroundColorSliser=document.querySelectorAll('.slider__contents')[0].firstChild.classList[1];
+      if(backgroundColorSliser==='blue'){
+        document.querySelector('section').style.background='#648BF0';
+        document.querySelector('section').style.borderBottom='none';
+      } else {
+        document.querySelector('section').style=null;
+      }
+       resolve()
+    })
+  })
    .then(()=>{
     return new Promise((resolve)=>{
       let currentLeft = -940;
@@ -99,21 +116,14 @@ const sliderNavigationLeftClick = () => {
               setTimeout(resolve,10);
               };
           });
-      },10);
+      },5);
     })
   })
     .then(()=>{
       return new Promise((resolve)=>{
         document.querySelectorAll('.slider-slide').forEach((item) => item.style.left='0');
         document.querySelectorAll('.slider-slide').forEach((item) => item.style.marginLeft='0');
-        let backgroundColorSliser=document.querySelectorAll('.slider__contents')[0].firstChild.classList[1];
-        if(backgroundColorSliser==='blue'){
-            document.querySelector('section').style.background='#648BF0';
-            document.querySelector('section').style.borderBottom='none';
-          } else {
-            document.querySelector('section').style=null;
-          }
-          resolve();
+        resolve();
       })
     })
       .then(()=>{
@@ -122,8 +132,7 @@ const sliderNavigationLeftClick = () => {
         resolve();
       })
     })
-    
-}
+  }
 
 const sliderPhoneVerticalDisplayOff = (elem) => {
   parentNodeClass=elem.target.parentNode.className;
