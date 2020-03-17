@@ -1,11 +1,11 @@
 var sliderScrollOn=false;
 
-const menuNavigationClick =(elem)=>{
+const menuNavigationClick = (elem) => {
   document.querySelectorAll('.navigation__link').forEach(el => el.classList.remove('active'));
   elem.target.classList.add('active');
 }
 
-const portfolioTagClick=(elem)=>{
+const portfolioTagClick = (elem) => {
   document.querySelectorAll('.tag').forEach(el => el.classList.remove('active'));
   elem.target.classList.add('active');
   
@@ -14,7 +14,7 @@ const portfolioTagClick=(elem)=>{
   document.querySelector('.portfolio__examples').insertAdjacentElement('beforeend',img);
 }
 
-const portfolioExamplesClick =(elem)=>{
+const portfolioExamplesClick = (elem) => {
   document.querySelectorAll('.portfolio__image').forEach(el => el.classList.remove('active'));
   elem.target.classList.add('active');
 }
@@ -29,7 +29,7 @@ const sliderNavigationClick = (elem) => {
   }
 }
 
-function sliderNavigationRightClick(){
+const sliderNavigationRightClick = () => {
   if(sliderScrollOn){
     return;
   }
@@ -73,7 +73,7 @@ function sliderNavigationRightClick(){
   })
 }
 
-function sliderNavigationLeftClick(){
+const sliderNavigationLeftClick = () => {
   if(sliderScrollOn){
     return;
   }
@@ -125,7 +125,37 @@ function sliderNavigationLeftClick(){
     
 }
 
+const sliderPhoneVerticalDisplayOff = (elem) => {
+  parentNodeClass=elem.target.parentNode.className;
+  if(parentNodeClass==='phone__shadow'){
+    return;
+  }
+  elem = document.querySelector('.phone__vertical-display_off');
+  let statusDisplay = elem.style.display;
+  if(statusDisplay===''){
+    elem.style.display='block';
+    } else {
+    elem.style=null;
+  }
+}
+
+const sliderPhoneHorizontalDisplayOff = (elem) => {
+  parentNodeClass=elem.target.parentNode.className;
+  if(parentNodeClass==='phone__shadow'){
+    return;
+  }
+  elem = document.querySelector('.phone__horizontal-display_off');
+  let statusDisplay = elem.style.display;
+  if(statusDisplay===''){
+   elem.style.display='block';
+   } else {
+   elem.style=null;
+  }
+}
+
 document.querySelector('.navigation').addEventListener('click', menuNavigationClick);
 document.querySelector('.portfolio__tags').addEventListener('click', portfolioTagClick);
 document.querySelector('.portfolio__examples').addEventListener('click', portfolioExamplesClick);
 document.querySelector('.slider-navigation').addEventListener('click', sliderNavigationClick);
+document.querySelector('.phone__vertical').addEventListener('click', sliderPhoneVerticalDisplayOff);
+document.querySelector('.phone__horizontal').addEventListener('click', sliderPhoneHorizontalDisplayOff);

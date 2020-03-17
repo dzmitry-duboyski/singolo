@@ -247,6 +247,20 @@ justify-content: center;
   margin-left: -1px;
 }
 
+.phone__vertical-display_off {
+  display: none;
+  position: absolute;
+  top: 65px;
+  left: 14px;
+}
+
+.phone__horizontal-display_off {
+  display: none;
+  position: absolute;
+  top: 14px;
+  left: 60px;
+}
+
 .phone__horizontal {
   position: relative;
   z-index: 1;
