@@ -175,7 +175,7 @@ h6 {
   height: 600px;
   border-bottom: 6px solid #ff6666;
   background: #f06c64;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .slider {
@@ -234,6 +234,11 @@ h6 {
   padding-top: 57px;
   padding-bottom: 89px;
   padding-left: 73px;
+}
+
+.slider-slide.blue {
+display: flex;
+justify-content: center;
 }
 
 .phone__vertical {

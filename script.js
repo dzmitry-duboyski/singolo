@@ -88,9 +88,7 @@ function sliderNavigationLeftClick(){
       return new Promise((resolve)=>{
         document.querySelectorAll('.slider-slide').forEach((item) => item.style.left='0');
         document.querySelectorAll('.slider-slide').forEach((item) => item.style.marginLeft='0');
-
         let backgroundColorSliser=document.querySelectorAll('.slider__contents')[0].firstChild.classList[1];
-        
         if(backgroundColorSliser==='blue'){
             document.querySelector('section').style.background='#648BF0';
             document.querySelector('section').style.borderBottom='none';
