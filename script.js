@@ -167,7 +167,7 @@ const contactBtnSubmit = (event) => {
   let description = document.getElementById('description').value.toString();
   const name = document.getElementById('name').value.toString();
   const email = document.getElementById('email').value.toString();
-  
+
   if(name !== '' && email !== ''){
     event.preventDefault();
     if(subject === ''){
@@ -198,6 +198,26 @@ const contactBtnClose = (event) => {
   document.getElementById('form').reset()
 }
 
+const onScroll = (e) => {
+  const curPos = window.scrollY;
+  const section = document.querySelectorAll('#wrapper>section');
+  const links = document.querySelectorAll('#navigation-menu a');
+
+  section.forEach((el)=>{
+
+    if (el.offsetTop <= curPos && ( el.offsetTop + el.offsetHeight) > curPos){
+      links.forEach((a)=>{
+        a.classList.remove('active');
+        if (el.getAttribute('id') === a.getAttribute('href').substring(1)){
+          a.classList.add('active');
+        }
+      })
+
+    }
+  })
+
+}
+
 
 document.querySelector('.navigation').addEventListener('click', menuNavigationClick);
 document.querySelector('.portfolio__tags').addEventListener('click', portfolioTagClick);
@@ -207,4 +227,4 @@ document.querySelector('.phone__vertical').addEventListener('click', sliderPhone
 document.querySelector('.phone__horizontal').addEventListener('click', sliderPhoneHorizontalDisplayOff);
 document.getElementById('contact-btn_submit').addEventListener('click', contactBtnSubmit);
 document.getElementById('contact-btn_close').addEventListener('click', contactBtnClose);
-
+document.addEventListener('scroll', onScroll)
