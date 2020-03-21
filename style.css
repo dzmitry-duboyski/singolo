@@ -647,6 +647,32 @@ input::-webkit-input-placeholder {
   transition: 0.2s;
 }
 
+#message-block {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #493e3ee7;
+  z-index: 10;
+}
+
+#message-block.hidden {
+  display: none;
+}
+
+#message {
+  position: absolute;
+  top: 38%;
+  left: 35%;
+  padding: 35px 70px;
+  text-align: center;
+  border-radius: 7px;
+  border: 10px solid rgb(211, 84, 84);
+  background: rgb(255, 255, 255);
+  z-index: 11;
+}
+
 .contact-information {
   padding-left: 19px;
 }

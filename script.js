@@ -132,7 +132,7 @@ const sliderNavigationLeftClick = () => {
         resolve();
       })
     })
-  }
+}
 
 const sliderPhoneVerticalDisplayOff = (elem) => {
   parentNodeClass=elem.target.parentNode.className;
@@ -162,9 +162,45 @@ const sliderPhoneHorizontalDisplayOff = (elem) => {
   }
 }
 
+const contactBtnSubmit = (event) => {
+  event.preventDefault();
+  let subject = document.getElementById('subject').value.toString();
+  let description = document.getElementById('description').value.toString();
+
+  if(subject == ''){
+    subject = 'No subject';
+    document.getElementById('subject-title').innerText = '';
+    document.getElementById('subject-message').innerText = subject;
+  } else {
+    document.getElementById('subject-title').innerText = 'Subject: ';
+    document.getElementById('subject-message').innerText = subject;
+  }
+
+  if(description == ''){
+    description = 'No description';
+    document.getElementById('description-title').innerText = '';
+    document.getElementById('description-message').innerText = description;
+  } else {
+    document.getElementById('description-title').innerText = 'Description: ';
+    document.getElementById('description-message').innerText = description;
+  }
+  
+  document.getElementById('message-block').classList.remove('hidden');
+}
+
+const contactBtnClose = (event) => {
+  event.preventDefault();
+  document.getElementById('message-block').classList.add('hidden');
+  document.getElementById('form').reset()
+}
+
+
 document.querySelector('.navigation').addEventListener('click', menuNavigationClick);
 document.querySelector('.portfolio__tags').addEventListener('click', portfolioTagClick);
 document.querySelector('.portfolio__examples').addEventListener('click', portfolioExamplesClick);
 document.querySelector('.slider-navigation').addEventListener('click', sliderNavigationClick);
 document.querySelector('.phone__vertical').addEventListener('click', sliderPhoneVerticalDisplayOff);
 document.querySelector('.phone__horizontal').addEventListener('click', sliderPhoneHorizontalDisplayOff);
+document.getElementById('contact-btn_submit').addEventListener('click', contactBtnSubmit);
+document.getElementById('contact-btn_close').addEventListener('click', contactBtnClose);
+
