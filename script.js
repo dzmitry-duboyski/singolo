@@ -166,8 +166,19 @@ const contactBtnSubmit = (event) => {
   event.preventDefault();
   let subject = document.getElementById('subject').value.toString();
   let description = document.getElementById('description').value.toString();
+  const name = document.getElementById('name').value.toString();
+  const email = document.getElementById('email').value.toString();
+  
+  if(name === ''){
+    document.getElementById('name').focus();
+    return;
+  }
+  if(email === ''){
+    document.getElementById('email').focus();
+    return;
+  }
 
-  if(subject == ''){
+  if(subject === ''){
     subject = 'No subject';
     document.getElementById('subject-title').innerText = '';
     document.getElementById('subject-message').innerText = subject;
@@ -176,7 +187,7 @@ const contactBtnSubmit = (event) => {
     document.getElementById('subject-message').innerText = subject;
   }
 
-  if(description == ''){
+  if(description === ''){
     description = 'No description';
     document.getElementById('description-title').innerText = '';
     document.getElementById('description-message').innerText = description;
@@ -184,7 +195,7 @@ const contactBtnSubmit = (event) => {
     document.getElementById('description-title').innerText = 'Description: ';
     document.getElementById('description-message').innerText = description;
   }
-  
+
   document.getElementById('message-block').classList.remove('hidden');
 }
 

@@ -276,29 +276,23 @@
       <div class="contact-informition_block">
         <div class="contact-form">
           <form id="form" action="">
-            <input class="contact-input" type="text" pattern="^[A-Za-z\s]+$" placeholder="Name (Required)" size="50" required>
-            <input class="contact-input" type="email" placeholder="Email (Required)" required>
+            <input id="name" class="contact-input" type="text" pattern="^[A-Za-z\s]+$" placeholder="Name (Required)" size="50" required>
+            <input id="email" class="contact-input" type="email" placeholder="Email (Required)" required>
             <input id='subject' class="contact-input" type="text" placeholder="Subject">
             <textarea id="description" class="contact-textarea" type="text" placeholder="Describe your project in detail"></textarea>
             <input id="contact-btn_submit" class="contact-submit" type="submit" value="Send message">
-
-
-          <div id="message-block"  class="hidden">
-            <div id="message">
-              <h2>The letter was sent</h2>
-              <p>
-                <span id="subject-title">Subject: </span><span id="subject-message"></span>
-              </p>
-              <p>
-                <span id="description-title">Description: </span><span id="description-message"></span>
-              </p>
-              <button id="contact-btn_close">ОК</button>
+            <div id="message-block"  class="hidden">
+              <div id="message">
+                <h2>The letter was sent</h2>
+                <p>
+                  <span id="subject-title">Subject: </span><span id="subject-message"></span>
+                </p>
+                <p>
+                  <span id="description-title">Description: </span><span id="description-message"></span>
+                </p>
+                <button id="contact-btn_close">ОК</button>
+              </div>
             </div>
-          </div>
-
-
-
-
           </form>
         </div>
         <div class="contact-information">
