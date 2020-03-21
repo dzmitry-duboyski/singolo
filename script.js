@@ -163,40 +163,33 @@ const sliderPhoneHorizontalDisplayOff = (elem) => {
 }
 
 const contactBtnSubmit = (event) => {
-  event.preventDefault();
   let subject = document.getElementById('subject').value.toString();
   let description = document.getElementById('description').value.toString();
   const name = document.getElementById('name').value.toString();
   const email = document.getElementById('email').value.toString();
   
-  if(name === ''){
-    document.getElementById('name').focus();
-    return;
-  }
-  if(email === ''){
-    document.getElementById('email').focus();
-    return;
-  }
+  if(name !== '' && email !== ''){
+    event.preventDefault();
+    if(subject === ''){
+      subject = 'No subject';
+      document.getElementById('subject-title').innerText = '';
+      document.getElementById('subject-message').innerText = subject;
+    } else {
+      document.getElementById('subject-title').innerText = 'Subject: ';
+      document.getElementById('subject-message').innerText = subject;
+    }
 
-  if(subject === ''){
-    subject = 'No subject';
-    document.getElementById('subject-title').innerText = '';
-    document.getElementById('subject-message').innerText = subject;
-  } else {
-    document.getElementById('subject-title').innerText = 'Subject: ';
-    document.getElementById('subject-message').innerText = subject;
-  }
+    if(description === ''){
+      description = 'No description';
+      document.getElementById('description-title').innerText = '';
+      document.getElementById('description-message').innerText = description;
+    } else {
+      document.getElementById('description-title').innerText = 'Description: ';
+      document.getElementById('description-message').innerText = description;
+    }
 
-  if(description === ''){
-    description = 'No description';
-    document.getElementById('description-title').innerText = '';
-    document.getElementById('description-message').innerText = description;
-  } else {
-    document.getElementById('description-title').innerText = 'Description: ';
-    document.getElementById('description-message').innerText = description;
+    document.getElementById('message-block').classList.remove('hidden');
   }
-
-  document.getElementById('message-block').classList.remove('hidden');
 }
 
 const contactBtnClose = (event) => {

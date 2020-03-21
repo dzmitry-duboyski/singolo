@@ -95,11 +95,13 @@ h6 {
 .container {
   max-width: 940px;
   margin: auto;
+ 
 }
 
 .header {
   background: #2d303a;
   border-bottom: 6px solid #323746;
+ position: sticky;
 }
 
 .header__inner {
