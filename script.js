@@ -208,7 +208,6 @@ const onScroll = (e) => {
     if (el.offsetTop <= curPos && ( el.offsetTop + el.offsetHeight) > curPos){
       links.forEach((a)=>{
         a.classList.remove('active');
-        console.log(el.getAttribute('id'))
         if (el.getAttribute('id') === a.getAttribute('href').substring(1)){
           a.classList.add('active');
         }
