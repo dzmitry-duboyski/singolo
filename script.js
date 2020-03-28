@@ -38,10 +38,10 @@ const sliderNavigationRightClick = () => {
   return new Promise((resolve) => {
     let backgroundColorSliser=document.querySelectorAll('.slider__contents')[0].firstElementChild.classList[1];
     if(backgroundColorSliser!=='blue'){
-      document.querySelector('section').style.background='#648BF0';
-      document.querySelector('section').style.borderBottom='none';
+        document.getElementById('slider').style.background='#648BF0';
+        document.getElementById('slider').style.borderBottom='none';
     } else {
-      document.querySelector('section').style=null;
+        document.getElementById('slider').style=null;
     }
       resolve()
   })
@@ -96,10 +96,10 @@ const sliderNavigationLeftClick = () => {
     return new Promise ((resolve) => {
       let backgroundColorSliser=document.querySelectorAll('.slider__contents')[0].firstChild.classList[1];
       if(backgroundColorSliser==='blue'){
-        document.querySelector('section').style.background='#648BF0';
-        document.querySelector('section').style.borderBottom='none';
+        document.getElementById('slider').style.background='#648BF0';
+        document.getElementById('slider').style.borderBottom='none';
       } else {
-        document.querySelector('section').style=null;
+        document.getElementById('slider').style=null;
       }
        resolve()
     })
@@ -208,6 +208,7 @@ const onScroll = (e) => {
     if (el.offsetTop <= curPos && ( el.offsetTop + el.offsetHeight) > curPos){
       links.forEach((a)=>{
         a.classList.remove('active');
+        console.log(el.getAttribute('id'))
         if (el.getAttribute('id') === a.getAttribute('href').substring(1)){
           a.classList.add('active');
         }
@@ -217,7 +218,6 @@ const onScroll = (e) => {
   })
 
 }
-
 
 document.querySelector('.navigation').addEventListener('click', menuNavigationClick);
 document.querySelector('.portfolio__tags').addEventListener('click', portfolioTagClick);
