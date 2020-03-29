@@ -212,10 +212,19 @@ const onScroll = (e) => {
           a.classList.add('active');
         }
       })
-
     }
   })
+}
 
+const contactBtnBurgerMenu = (el) => {
+  el = el.target.classList[1];
+  if(el==='active'){
+    document.querySelector('.header__burger-img').classList.remove('active');
+    document.querySelector('.navigation').classList.remove('active');
+  } else {
+    document.querySelector('.header__burger-img').classList.add('active');
+    document.querySelector('.navigation').classList.add('active');
+  }
 }
 
 document.querySelector('.navigation').addEventListener('click', menuNavigationClick);
@@ -227,3 +236,4 @@ document.querySelector('.phone__horizontal').addEventListener('click', sliderPho
 document.getElementById('contact-btn_submit').addEventListener('click', contactBtnSubmit);
 document.getElementById('contact-btn_close').addEventListener('click', contactBtnClose);
 document.addEventListener('scroll', onScroll)
+document.querySelector('.header__burger-img').addEventListener('click', contactBtnBurgerMenu);
