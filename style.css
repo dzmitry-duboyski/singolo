@@ -778,7 +778,7 @@ input::-webkit-input-placeholder {
 
 .footer-block {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 22px;
   padding-bottom: 17px;
 }
@@ -1263,8 +1263,12 @@ input::-webkit-input-placeholder {
     margin-bottom: 20px;
   }
 
-  .footer-copyright{
+  .footer-copyright {
     display: none;
+  }
+
+  .footer-block {
+    justify-content: center;
   }
 
 }
