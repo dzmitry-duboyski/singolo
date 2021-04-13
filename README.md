@@ -1,4 +1,4 @@
-## deploy:  https://dzmitry-duboyski.github.io/singolo/index.html
+## deploy: https://dzmitry-duboyski.github.io/singolo/index.html
 
  # [Макет - Singolo](https://dzmitry-duboyski.github.io/singolo/index.html)
 
